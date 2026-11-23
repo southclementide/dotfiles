@@ -146,6 +146,8 @@ in
           # PURE_GIT_SHOW_DIRTY=true
           # PURE_GIT_SHOW_DETAILS=true
           # prompt pure
+
+          fpath=("${config.xdg.configHome}/zsh/.zfunc" $fpath)
         '';
         config = lib.mkOrder 1000 (
           autoload_python_venv

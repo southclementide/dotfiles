@@ -23,6 +23,7 @@ in
   home.packages = with pkgs; [
     kubectl
     kubectx
+    kind # CKA/CKS lab (prepare-cka/lab/kind), expects v0.33.0
   ];
 
   home.file.".config/k9s/skins" = {
