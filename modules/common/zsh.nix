@@ -149,7 +149,7 @@ in
 
           fpath=("${config.xdg.configHome}/zsh/.zfunc" $fpath)
         '';
-        config = lib.mkOrder 1000 (
+        mainConfig = lib.mkOrder 1000 (
           autoload_python_venv
           + bat_help_alias
           + ''
@@ -220,7 +220,7 @@ in
       lib.mkMerge [
         earlyConfig
         beforeCompletionInitialization
-        config
+        mainConfig
         lastToRunConfig
       ];
   };
